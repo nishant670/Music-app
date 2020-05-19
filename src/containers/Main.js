@@ -10,68 +10,19 @@ export class Main extends Component {
 
     state = {
         musicData : [],
-        // currentAlbum : '',
-        // currentSong : '',
-        // currentURL : null,
-        // duration : null
     }
 
     componentDidMount(){
         this.setState({
             musicData : musicData
         })
-        console.log('componentdidmount', this.state.musicData)
     }
-
-    // listenClickHandler = (ld) => {
-        // const getCurrentSong = musicData.map(first => {
-        //     return first.playList.map(song => {
-        //         return {
-        //             songName : song.songName,
-        //             songURL : song.URL
-        //         }
-        //     })
-        // }) 
-        // this.setState({
-        //     currentAlbum : ld.albumName,
-        //         currentSong : ld.playList[0].songName,
-        //         currentURL : ld.playList[0].songURL,
-        //         duration : ld.playList[0].duration
-
-        // })
-    // }
-
-    // componentDidUpdate(prevProps, prevState) {
-    //     if(this.state.currentSong !== prevState.currentSong) {
-          
-    //       if(this.state.currentURL) {
-    //         this.player.src = this.state.currentURL;
-    //         this.player.play()
-    //       }
-    //     }
-    //   }
-
-    // songClickHandler = (songInfo) => {
-    //     this.setState({
-    //         currentSong : songInfo.songName,
-    //         currentURL : songInfo.songURL
-    //     })
-    //     this.forceUpdate();
-    // }
-
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return nextState.currentSong !== this.state.currentSong;
-    // }
 
 
     render() {
-            console.log(this.props.albumData);
         return (
             <div>
                 <Top />
-                {/* <audio controls ref="audio">
-   <source src={this.state.currentURL} />
-</audio> */}
                 <Body
                     musicData={musicData}
                     clicked={this.props.listenAlbumHandler}
