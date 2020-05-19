@@ -1,0 +1,13 @@
+.albumWrapper, .albumNameWrapper, .albumActionsWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .albumNameWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} */
+.equalToDivider{
+    padding: 0 15px;
+}

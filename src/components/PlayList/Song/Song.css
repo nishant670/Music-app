@@ -1,0 +1,26 @@
+.songWrapper, .songLeftWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.playBtn{
+        height: 40px;
+        width: 65px;
+        position: relative;
+        background: none;
+        border: none;
+    }
+    
+    .playBtn:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 16px;
+        left: 24px;
+        margin: 0 auto;
+        border-style: solid;
+        border-width: 6px 0 6px 13px;
+        /* color: #000; */
+        border-color: transparent transparent transparent rgba(33, 37, 41, 1);
+    }
