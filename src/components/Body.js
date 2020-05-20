@@ -15,7 +15,8 @@ const Body = props => {
                     <h2>DiscoGraphy</h2>
                     <AlbumList
                         musicData={props.musicData}
-                        clicked={props.clicked}/>
+                        />
+                        {/* removed property from above line -> clicked={props.clicked} */}
             </div>
             <div className="rightWrapper">
                 <h2>Now Playing</h2>

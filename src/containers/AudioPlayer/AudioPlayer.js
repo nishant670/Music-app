@@ -8,12 +8,16 @@ class AudioPlayer extends Component{
         const audio = this.audioRef.current;
         audio.pause();
         audio.load();
-        audio.play();
+        // audio.play();
     }
 
     componentDidUpdate(){
         this.audioManage();
     }
+
+    // componentDidMount(){
+    //     this.audioManage();
+    // }
 
     render(){
         const sourceUrl = this.props.url;
@@ -21,7 +25,7 @@ class AudioPlayer extends Component{
     return (
         <div>
             
-            <audio ref={this.audioRef} controls>
+            <audio ref={this.audioRef} controls autoPlay>
                 <source src={sourceUrl} type="audio/ogg" />
                 <source src={sourceUrl} type="audio/mpeg" />
                 Your browser does not support the audio element.

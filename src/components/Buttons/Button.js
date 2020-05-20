@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import {connect} from 'react-redux';
+
+import * as actions from '../../store/action';
 
 const Button = props => {
     return (
         <div>
-            <button onClick={()=>props.clicked(props.listenData)} style={styles.buttonStyle}>{props.children}</button>
+            <button onClick={()=>props.listenAlbumHandler(props.listenData)} style={styles.buttonStyle}>{props.children}</button>
         </div>
     )
 }
@@ -19,4 +22,19 @@ const styles = {
     }
 }
 
-export default Button;
+// const mapStateToProps = state => {
+//     return {
+//         albumData : state.currentAlbum,
+//         currentSong : state.currentSong,
+//         currentURL : state.currentURL,
+//         duration : state.duration
+//     }
+// }
+
+const mapDispatchToProps = dispatch => {
+    return {
+        listenAlbumHandler : (albData) => dispatch(actions.listenAlbum(albData))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Button);

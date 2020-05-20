@@ -25,7 +25,7 @@ export class Main extends Component {
                 <Top />
                 <Body
                     musicData={musicData}
-                    clicked={this.props.listenAlbumHandler}
+                    // clicked={this.props.listenAlbumHandler}
                     currentAlbumName={this.props.albumData}
                     currentSong={this.props.currentSong}
                     url={this.props.currentURL}

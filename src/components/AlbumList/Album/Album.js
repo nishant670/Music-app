@@ -12,7 +12,8 @@ const Album = props => {
             </div>
             <div className="albumActionsWrapper">
                 <Button>Buy</Button>
-                <Button clicked={props.clicked} listenData={props.listenData}>Listen</Button>
+                <Button listenData={props.listenData}>Listen</Button>
+                {/* removed property from above line -> clicked={props.clicked} */}
             </div>
         </div>
     )

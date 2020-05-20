@@ -4,8 +4,9 @@ import Album from './Album/Album';
 
 const AlbumList = props => {
     const musicDataa = props.musicData.map(al => {
-        return <Album key={al.id} albumName={al.albumName} albumReleaseYear={al.releasedYear} clicked={props.clicked} listenData={al}/>
+        return <Album key={al.id} albumName={al.albumName} albumReleaseYear={al.releasedYear} listenData={al}/>
     })
+        {/* removed property from above line -> clicked={props.clicked} */}
     return (
         <div>
             {musicDataa}
